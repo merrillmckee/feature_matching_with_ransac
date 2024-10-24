@@ -21,6 +21,6 @@ class FeatureMatches(BaseModel):
             "example": {
                 "image_and_features_1": ImageAndFeatures.Config.json_schema_extra["example"],
                 "image_and_features_2": ImageAndFeatures.Config.json_schema_extra["example"],
-                "matches": [[0, 0], [1, 1]],
+                "matches": [[0, 0], [1, 1], [2, 2], [3, 3]],
             }
         }

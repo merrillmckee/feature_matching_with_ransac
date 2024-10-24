@@ -44,6 +44,10 @@ class ImageAndFeatures(BaseModel):
         description="List of image features",
     )
 
+    def to_points(self) -> NDArray[Shape["*, 2"], np.floating]:
+        points = [(feature.x, feature.y) for feature in self.features]
+        return np.array(points)
+
     class Config:
         json_schema_extra = {
             "example": {
@@ -55,6 +59,8 @@ class ImageAndFeatures(BaseModel):
                 "features": [
                     Feature.Config.json_schema_extra["example"],
                     Feature(x=100, y=100),
+                    Feature(x=120, y=210),
+                    Feature(x=120, y=110),
                 ],
             }
         }

@@ -1,9 +1,25 @@
 import numpy as np
+from abc import ABC
+
 from numpydantic import NDArray, Shape
 from pydantic import BaseModel, Field, field_validator
 
 
-class Translation(BaseModel):
+class ImageTransform(ABC):
+    # I'd like to promote field "transform" from the derived classes to this
+    # base class but ran into issues with the pydantic validators. For now,
+    # leaving "transform" in the derived classes.
+
+    @classmethod
+    def apply_transform(cls, points: NDArray[Shape["*, 2"], np.floating], transform: "ImageTransform") \
+        -> NDArray[Shape["*, 2"], np.floating]:
+        n = points.shape[0]
+        points_3d = np.hstack((points, np.ones((n, 1))))
+        xform_points_3d = np.matmul(points_3d, transform.transform.T)
+        return xform_points_3d[:, :2]
+
+
+class Translation(BaseModel, ImageTransform):
     transform: NDArray[Shape["3, 3"], np.floating] = Field(
         description="(3, 3) array to transform points from image 1 to image 2"
     )
@@ -32,7 +48,7 @@ class Translation(BaseModel):
         }
 
 
-class Affine(BaseModel):
+class Affine(BaseModel, ImageTransform):
     transform: NDArray[Shape["3, 3"], np.floating] = Field(
         description="(3, 3) array to transform points from image 1 to image 2"
     )
@@ -59,7 +75,7 @@ class Affine(BaseModel):
         }
 
 
-class Homography(BaseModel):
+class Homography(BaseModel, ImageTransform):
     transform: NDArray[Shape["3, 3"], np.floating] = Field(
         description="(3, 3) array to transform points from image 1 to image 2"
     )

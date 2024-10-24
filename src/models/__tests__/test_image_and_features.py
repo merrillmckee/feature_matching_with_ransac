@@ -1,6 +1,6 @@
 import pytest
 
-from src.models.image_and_features import Feature, ImageAndFeatures
+from models.image_and_features import Feature, ImageAndFeatures
 
 
 def test_feature():

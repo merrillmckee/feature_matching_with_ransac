@@ -1,7 +1,7 @@
 import numpy as np
 
 from scripts.visualize.visualize import visualize_image_and_features_pillow
-from src.models.image_and_features import ImageAndFeatures
+from models.image_and_features import ImageAndFeatures
 
 
 if __name__ == "__main__":

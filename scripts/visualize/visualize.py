@@ -1,5 +1,5 @@
 from PIL import Image, ImageDraw
-from src.models.image_and_features import ImageAndFeatures
+from models.image_and_features import ImageAndFeatures
 
 
 def visualize_image_and_features_pillow(image_and_features: ImageAndFeatures):

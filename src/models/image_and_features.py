@@ -4,6 +4,9 @@ from pydantic import BaseModel, Field
 
 
 class Feature(BaseModel):
+    """
+    Describes an image feature like SIFT or KAZE
+    """
     x: float = Field(
         description="x-coordinate of feature in pixels",
     )
@@ -20,7 +23,7 @@ class Feature(BaseModel):
     )
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "x": 100,
                 "y": 200,
@@ -31,6 +34,9 @@ class Feature(BaseModel):
 
 
 class ImageAndFeatures(BaseModel):
+    """
+    An image and its associated features
+    """
     image: NDArray[Shape["* x, * y, 3 rgb"], np.uint8] = Field(
         description="(H, W, Ch) RGB image",
     )
@@ -39,13 +45,13 @@ class ImageAndFeatures(BaseModel):
     )
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "image": np.array(
                     # (2, 3) RGB image of alternating black and blue pixels
                     object=[[[0, 0, 0], [0, 0, 255], [0, 0, 0]], [[0, 0, 255], [0, 0, 0], [0, 0, 255]]],
                     dtype=np.uint8,
                 ),
-                "features": [Feature.Config.schema_extra["example"]],
+                "features": [Feature.Config.json_schema_extra["example"]],
             }
         }

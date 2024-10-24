@@ -26,7 +26,7 @@ def feature_to_bounding_box(feature: Feature) -> tuple[float, float, float, floa
     return bounding_box
 
 
-def visualize_image_and_features_pillow(image_and_features: ImageAndFeatures):
+def visualize_image_and_features(image_and_features: ImageAndFeatures):
     """
     Displays an image with overlays for each feature
 
@@ -43,7 +43,7 @@ def visualize_image_and_features_pillow(image_and_features: ImageAndFeatures):
     image.show()
 
 
-def visualize_feature_matches_pillow(feature_matches: FeatureMatches):
+def visualize_feature_matches(feature_matches: FeatureMatches):
     """
     Displays a pair of images with overlays for each feature match
 

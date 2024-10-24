@@ -2,14 +2,14 @@ from pydantic import BaseModel, Field
 from models.image_and_features import ImageAndFeatures
 
 
-class Matches(BaseModel):
+class FeatureMatches(BaseModel):
     """
     Describes image features matches between a pair of images
     """
-    image_1: ImageAndFeatures = Field(
+    image_and_features_1: ImageAndFeatures = Field(
         description="Image and features for image 1",
     )
-    image_2: ImageAndFeatures = Field(
+    image_and_features_2: ImageAndFeatures = Field(
         description="Image and features for image 1",
     )
     matches: list[tuple[int, int]] = Field(
@@ -19,8 +19,8 @@ class Matches(BaseModel):
     class Config:
         json_schema_extra = {
             "example": {
-                "image_1": ImageAndFeatures.Config.json_schema_extra["example"],
-                "image_2": ImageAndFeatures.Config.json_schema_extra["example"],
+                "image_and_features_1": ImageAndFeatures.Config.json_schema_extra["example"],
+                "image_and_features_2": ImageAndFeatures.Config.json_schema_extra["example"],
                 "matches": [[0, 0]],
             }
         }

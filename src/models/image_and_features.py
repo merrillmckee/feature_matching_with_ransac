@@ -52,6 +52,9 @@ class ImageAndFeatures(BaseModel):
                     object=[[[0, 0, 0], [0, 0, 255], [0, 0, 0]], [[0, 0, 255], [0, 0, 0], [0, 0, 255]]],
                     dtype=np.uint8,
                 ),
-                "features": [Feature.Config.json_schema_extra["example"]],
+                "features": [
+                    Feature.Config.json_schema_extra["example"],
+                    Feature(x=100, y=100),
+                ],
             }
         }

@@ -64,7 +64,7 @@ def detect_features(
         an ImageAndFeatures instance
     """
     detector = create_feature_detector(algorithm)
-    features_cv = detector.detect(image, mask=None)
+    features_cv, descriptors = detector.detectAndCompute(image, mask=None)
 
     # DEBUG
     # out = cv2.drawKeypoints(image, features, outImage=None, color=(0, 255, 0))

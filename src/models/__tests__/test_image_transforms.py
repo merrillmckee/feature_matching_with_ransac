@@ -5,7 +5,7 @@ from models.image_transforms import Translation, Affine, Homography
 
 
 def test_check_translation_transform():
-    transform_example = Translation.Config.json_schema_extra["example"]
+    transform_example = Translation.Config.json_schema_extra["example"].copy()
 
     # example
     translation = Translation.model_validate(transform_example)
@@ -33,7 +33,7 @@ def test_check_translation_transform():
 
 
 def test_check_affine_transform():
-    transform_example = Affine.Config.json_schema_extra["example"]
+    transform_example = Affine.Config.json_schema_extra["example"].copy()
 
     # example
     affine = Affine.model_validate(transform_example)
@@ -56,7 +56,7 @@ def test_check_affine_transform():
 
 
 def test_check_homography():
-    transform_example = Homography.Config.json_schema_extra["example"]
+    transform_example = Homography.Config.json_schema_extra["example"].copy()
 
     # example
     homography = Homography.model_validate(transform_example)

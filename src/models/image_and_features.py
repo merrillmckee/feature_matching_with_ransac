@@ -1,6 +1,7 @@
 import numpy as np
 from numpydantic import NDArray, Shape
 from pydantic import BaseModel, Field
+from typing import Optional
 
 
 class Feature(BaseModel):
@@ -16,10 +17,20 @@ class Feature(BaseModel):
     scale: float = Field(
         description="scale of the feature in pixels",
         default=1.0,
+        gt=0.0,
     )
     rotation: float = Field(
+        # todo: define better
         description="rotation angle, in degrees CCW from +x-axis",
         default=90.0,
+        ge=0.0,
+        lt=360.0,
+    )
+    descriptor: Optional[list[float]] = Field(
+        description="128 dimension feature descriptor",
+        default=None,
+        min_length=128,
+        max_length=128,
     )
 
     class Config:
@@ -29,6 +40,7 @@ class Feature(BaseModel):
                 "y": 200,
                 "scale": 1.0,
                 "rotation": 90.0,
+                "descriptor": [0.0] * 128,
             }
         }
 

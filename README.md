@@ -30,6 +30,7 @@ Visualizations of the models
 Visualization of the algorithms
 - [detect features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_detect_features.py)  
 ![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/detect_features_1.jpg)
+![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/detect_features_2.jpg)
 - [match features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_match_features.py)  
 ![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/match_features.jpg)
 - todo: model transform

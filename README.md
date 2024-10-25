@@ -16,13 +16,13 @@ The scripts folder contains numerous visualization utilities. Run in the followi
 blocks to actual results can be seen:
 
 Visualizations of the models
-- [images and features]()
-- [feature matches]()
-- [apply translation]()
-- [apply affine]()
-- [apply homography]()
+- [images and features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_image_and_features.py)
+- [feature matches](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_feature_matches.py)
+- [apply translation](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_translation.py)
+- [apply affine](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_affine.py)
+- [apply homography](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_homography.py)
 
 Visualization of the algorithms
-- [detect features]()
-- [match features]()
-- todo: [model transform]()
+- [detect features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_detect_features.py)
+- [match features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_match_features.py)
+- todo: model transform

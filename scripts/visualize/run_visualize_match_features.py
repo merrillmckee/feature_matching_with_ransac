@@ -17,5 +17,7 @@ if __name__ == "__main__":
     image_and_features_2 = detect_features(np.array(image), algorithm=algorithm)
     # visualize_image_and_features(image_and_features_2)
 
+    # normally the threshold is 0.7-0.85, but I think my moon image samples are too similar
+    # so for this visualization I lowered the threshold to 0.2 to produce fewer matches (looks better visually)
     matches = match_features(image_and_features_1, image_and_features_2, ratio_threshold=0.2)
     visualize_feature_matches(matches)

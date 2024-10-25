@@ -16,13 +16,13 @@ The scripts folder contains numerous visualization utilities. Run in the followi
 blocks to actual results can be seen:
 
 Visualizations of the models
-[images and features]()
-[feature matches]()
-[apply translation]()
-[apply affine]()
-[apply homography]()
+- [images and features]()
+- [feature matches]()
+- [apply translation]()
+- [apply affine]()
+- [apply homography]()
 
 Visualization of the algorithms
-[detect features]()
-[match features]()
-todo: [model transform]()
+- [detect features]()
+- [match features]()
+- todo: [model transform]()

@@ -16,7 +16,7 @@ The scripts folder contains numerous visualization utilities. Run in the followi
 blocks to actual results can be seen:
 
 Visualizations of the models
-- [images and features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_image_and_features.py)
+- [images and features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_image_and_features.py)  
 ![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/image_and_features.jpg)
 - [feature matches](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_feature_matches.py)
 - [apply translation](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_translation.py)

@@ -28,8 +28,8 @@ Visualizations of the models
 ![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/apply_homography.jpg)
 
 Visualization of the algorithms  
-![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/moon_1.jpg)
-![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/moon_2.jpg)
+![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/moon_1.png)
+![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/moon_2.png)
 - [detect features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_detect_features.py)  
 ![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/detect_features_1.jpg)
 ![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/detect_features_2.jpg)

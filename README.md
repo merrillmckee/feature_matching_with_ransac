@@ -18,12 +18,18 @@ blocks to actual results can be seen:
 Visualizations of the models
 - [images and features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_image_and_features.py)  
 ![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/image_and_features.jpg)
-- [feature matches](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_feature_matches.py)
-- [apply translation](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_translation.py)
-- [apply affine](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_affine.py)
-- [apply homography](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_homography.py)
+- [feature matches](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_feature_matches.py)  
+![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/feature_matches.jpg)
+- [apply translation](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_translation.py)  
+![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/apply_translation.jpg)
+- [apply affine](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_affine.py)  
+![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/apply_affine.jpg)
+- [apply homography](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_apply_homography.py)  
+![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/apply_homography.jpg)
 
 Visualization of the algorithms
-- [detect features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_detect_features.py)
-- [match features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_match_features.py)
+- [detect features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_detect_features.py)  
+![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/detect_features_1.jpg)
+- [match features](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/visualize/run_visualize_match_features.py)  
+![image](https://github.com/merrillmckee/feature_matching_with_ransac/blob/main/scripts/images/match_features.jpg)
 - todo: model transform

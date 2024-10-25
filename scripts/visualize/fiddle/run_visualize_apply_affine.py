@@ -20,9 +20,17 @@ if __name__ == "__main__":
 
         # case 2
         # scale of 1.5 from !origin!
+        # transform=np.array([
+        #     [1.5, 0, 0],
+        #     [0, 1.5, 0],
+        #     [0, 0, 1],
+        # ], dtype=float)
+
+        # case 3
+        # random-ish points; parallel lines appear to hold
         transform=np.array([
-            [1.5, 0, 0],
-            [0, 1.5, 0],
+            [1.5, -0.9, 15],
+            [1.4, 0.8, -10],
             [0, 0, 1],
         ], dtype=float)
     )

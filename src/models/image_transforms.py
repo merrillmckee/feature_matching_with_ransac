@@ -16,6 +16,9 @@ class ImageTransform(ABC):
         n = points.shape[0]
         points_3d = np.hstack((points, np.ones((n, 1))))
         xform_points_3d = np.matmul(points_3d, transform.transform.T)
+
+        # make homogeneous points by dividing by 3rd value
+        xform_points_3d = (xform_points_3d.T / xform_points_3d[:, 2]).T
         return xform_points_3d[:, :2]
 
 

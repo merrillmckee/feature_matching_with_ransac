@@ -1,3 +1,4 @@
+import numpy as np
 import pytest
 
 from models.image_and_features import Feature, ImageAndFeatures
@@ -14,18 +15,18 @@ def test_feature_no_descriptor():
 
 def test_feature_invalid_descriptor():
     example = Feature.Config.json_schema_extra["example"].copy()
-    example["descriptor"] = [1.234] * 128  # good
+    example["descriptor"] = np.array([1.234] * 128, dtype=np.float32)  # good
     assert isinstance(Feature.model_validate(example), Feature)
 
     example["descriptor"] = 1.234
     with pytest.raises(ValueError):
         _ = Feature.model_validate(example)
 
-    example["descriptor"] = [1.234]
+    example["descriptor"] = np.array([1.234], dtype=np.float32)
     with pytest.raises(ValueError):
         _ = Feature.model_validate(example)
 
-    example["descriptor"] = [1.234] * 127
+    example["descriptor"] = np.array([1.234] * 127, dtype=np.float32)
     with pytest.raises(ValueError):
         _ = Feature.model_validate(example)
 

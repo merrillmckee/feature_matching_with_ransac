@@ -26,7 +26,7 @@ class Feature(BaseModel):
         ge=0.0,
         lt=360.0,
     )
-    descriptor: Optional[list[float]] = Field(
+    descriptor: Optional[NDArray[Shape["128"], np.float32]] = Field(
         description="128 dimension feature descriptor",
         default=None,
         min_length=128,
@@ -40,7 +40,7 @@ class Feature(BaseModel):
                 "y": 200,
                 "scale": 1.0,
                 "rotation": 90.0,
-                "descriptor": [0.0] * 128,
+                "descriptor": np.array([1.234] * 128, dtype=np.float32),
             }
         }
 
@@ -55,6 +55,11 @@ class ImageAndFeatures(BaseModel):
     features: list[Feature] = Field(
         description="List of image features",
     )
+
+    @property
+    def descriptors(self) -> list[NDArray[Shape["128"], np.float32]]:
+        d = [feat.descriptor for feat in self.features]
+        return d
 
     def to_points(self) -> NDArray[Shape["*, 2"], np.floating]:
         points = [(feature.x, feature.y) for feature in self.features]

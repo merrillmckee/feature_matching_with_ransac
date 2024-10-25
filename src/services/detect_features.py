@@ -72,7 +72,18 @@ def detect_features(
     # key = cv2.waitKey(0)
     # cv2.destroyAllWindows()
 
-    features = [Feature(x=feat.pt[0], y=feat.pt[1], scale=feat.size / 2.0) for feat in features_cv]
+    if len(features_cv) > 0:
+        features = [
+            Feature(
+                x=feat.pt[0],
+                y=feat.pt[1],
+                scale=feat.size / 2.0,
+                descriptor=descriptor,
+            ) for feat, descriptor in zip(features_cv, descriptors)
+        ]
+    else:
+        features = []
+
     image_and_feature = ImageAndFeatures(
         image=image,
         features=features,
